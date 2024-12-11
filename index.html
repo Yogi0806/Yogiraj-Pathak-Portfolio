@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yogiraj Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Yogiraj S. Pathak</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume & Experience</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="height: 400px; background-image: url(images/bg_main.png);"> 
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello, Welcome to my Portfolio!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Yogiraj S. Pathak</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						// 'Data Analyst  ',
+						'Software Developer & Design ',
+						//  'Teacher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2></h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> -->
+							<p><a href="https://www.linkedin.com/in/yogiraj-pathak-91423322a/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a>  
+							<a href="https://github.com/Yogi0806" target="_blank" class="btn btn-primary py-3 px-4">GitHub</a></p> <!-- for white and black buttonbtn btn-white btn-outline-white py-3 px-4-->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s"><b>Name: </b></span> <span>Yogiraj Santosh Pathak</span></p>
+										<p><span class="title-s"><b>Address: </b></span> <span>Pune, Maharashtra, India</span></p>
+									  </div>
+									</div>
+								  </div>
+								  <br>
+								<div class="skill-mf">
+									<p class="title-s"><h3>Skills</h3></p>
+									<span>C, C++, JAVA</span> <span class="pull-right"><b>70%</b></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Web Development (HTML, CSS, JavaScript, PHP)</span> <span class="pull-right"><b>75%</b></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL (Oracle, MySQL), NoSQL (MongoDB)</span> <span class="pull-right"><b>70%</b></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Frameworks & Libraries ( ReactJS, AngularJS, Bootstrap, Spring Boot, Spring, Laravel)</span> <span class="pull-right"><b>65%</b></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>UI / UX Design Figma</span> <span class="pull-right"><b>75%</b></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Welcome to My Portfolio Website! I am Yogiraj Santosh Pathak, an enthusiastic and detail-oriented IT professional with a passion for creating innovative and impactful solutions. With a strong foundation in web development, programming, and database management, I specialize in leveraging technologies like Java, HTML, CSS, JavaScript, PHP, ReactJS, and Spring Boot to develop user-friendly applications and responsive websites. My journey includes crafting dynamic platforms, enhancing user experiences, and collaborating with teams to deliver high-quality projects. I am committed to continuous learning and bringing fresh perspectives to every challenge I tackle. Explore my portfolio to discover how I can contribute to building remarkable solutions.
+
+
+
+
+
+
+
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Software Development and Design</span></li>
+									
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Marathi, Hindi</span></li>
+									<li class="d-flex"><span>Tools:</span> <span>VS Code, GitHub, Figma</span></li>
+									<li class="d-flex"><span>Soft Skills:</span> <span>Results Oriented, Team Leadership, Decision Making, Problem Solving, Active Learning</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Sports Enthusiast, Tech Curious, Cultural Engagement, Current Affairs Exploration</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/yogiraj-pathak-91423322a/" target="_blank" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Full Stack Developer Intern experience in Java, Web Development and UI/UX Designer with a strong foundation in Technical Knowledge. Skilled in creating Dynamic, Responsive Websites and Applications, with expertise in Front-end and Back-end Development, UI/UX design, and Project Collaboration.</p>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/11Zh51wfPepCwC2VJZCeE5cAM_sgKS7Ey/view?usp=sharing" target="_blank" class="btn btn-primary py-3 px-3">Download CV</a></p>
+				</div>
+			</div>
+          </div>
+        </div>
+
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">SEP 2023 - OCT 2023</span>
+						<h2>Web Developer Intern</h2>
+						<span class="position">PHN Technologies</span>
+						<p class="mt-4">PHN Technologies is a Dynamic IT solutions provider, specializing in custom Web and Mobile Application Development. The company offers expertise in Full-Stack Development, UI/UX Design, and System Integration, delivering innovative solutions to client needs for optimized Business Performance.</p>
+						    <ul>
+								<li>Possesses a strong understanding of Front-end and Back-end Technologies, with hands-on experience in building Dynamic Responsive Website. Skilled in Web Development using Java, HTML, CSS, JavaScript, ReactJS.</li>
+								<li>Gained practical experience User Interface Design, and Project Management. Proficient in integrating Front-end and Back-end solutions to deliver seamless User Experiences.</li>
+								<li>Experienced in tools like GitHub, Figma, and MySQL for effective Version Control and Collaboration.</li>
+								<li>Familiar with coding best practices and Agile Methodologies, with a focus on delivering High-Quality, User-Centric Solutions.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">FEB 2023 - AUG 2023</span>
+						<h2>Software Developer and Design Intern</h2>
+						<span class="position">Gravitech Dreams</span>
+						<p class="mt-4">Gravitech Dreams is a technology company specializing in software development, web applications, and digital transformation services. The company excels in front-end and back-end development, UI/UX design, and system integration, delivering tailored solutions to enhance business operations and user experiences.</p>
+							<ul>
+								<li>Assisted the Development of the EduCracyPedia Web Application, utilizing Figma for UI/UX design and integrating Front-end Technologies (HTML, CSS, JavaScript, AngularJS) to create a seamless User Experience.</li>
+								<li>Collaborated with cross-functional teams, aligning project objectives and overcoming challenges to achieve project goals, enhancing Web Development expertise and Project Management Skills.</li>
+								<li>Gained hands-on experience in Full-Stack Development, improving  technical skills and ensuring efficient, User-Centered Solutions through Agile Methodologies.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<style>
+			.resume-wrap {
+				height: 100%; /* Adjust this value as needed */
+			}
+		</style>
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021 - 2024</span>
+    					<h2>BE-Computer Engineering</h2>
+    					<span class="position">Pune Vidyarthi Griha's College of Engineering, Nashik</span>
+    					<p class="mt-4">Grade: First class distinction with <b>8.17 GPA</b>.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017 - 2021</span>
+    					<h2>Diploma-Computer Technology</h2>
+    					<span class="position">Government Polytechnic, Ahilyanagar</span>
+    					<p class="mt-4">Grade: First class distinction <b>89.20 %</b>.</p>
+    				</div>
+				</div>
+    		</div>
+
+    	
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the Web Development projects utilizing Java, JavaScript, PHP, ReactJS, AngularJS, Spring Boot, MySQL, along with experience in UI/UX Design, GitHub, and Figma, showcasing expertise in Development & Design.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href=" https://github.com/Yogi0806/AutoQue-System" target="_blank">AutoQue System - <u>Final Year Project in BE</u></a></h3>
+                <p>Created an Automatic Question Paper Generation System with Mark Allocation based on Bloom’s Taxonomy, ensuring a diverse range of questions aligned with learning objectives.Optimized question categorization and mark distribution, ensuring consistent assessments and reducing grading subjectivity through user-provided datasets.Combined technologies to develop a streamlined, efficient system for generating Question Papers.</p>
+								<p>Tools Used: Python, Pandas, NumPy, Scikit-learn, Natural Language Toolkit (NLTK), MySQL, Blooms Taxonomy, Django, AI/ML, HTML, CSS, JavaScript, UI/UX-Figma, GitHub</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Yogi0806/BuyMe-ECommerce-Site" target="_blank" >BuyMe Website - <u>Personal Project</u></a></h3>
+                <p>Developed a sophisticated E-Commerce Platform tailored to Electronic Products, utilizing MySQL for Database Management and organizing categories like cameras, laptops, mobiles and more. I Designed a sleek, Responsive Interface using HTML, CSS, and JavaScript, ensuring a seamless User Experience across devices. The platform's Back-end was built with PHP, creating a robust system that enhances customer satisfaction and drives user engagement. The project was managed and hosted on GitHub for version control and team collaboration.</p>
+				<p>Tools Used: HTML, CSS, JavaScript, PHP, Laravel, MySQL, Bootstrap, jQuery, Apache, XAMPP, GitHub</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href=" ">EduCracyPedia Application - <u>Internship Project at Gravitech Dreams</u></a></h3>
+                <p>Designed and Developed a user-focused news platform by first identifying user needs and mapping out features for seamless navigation. We then created wireframes and visual elements using Figma to Design an intuitive UI/UX. For efficient data management, MySQL was used to structure the Database. The platform was developed by integrating Front-end Technologies to deliver a fully functional website. Lastly, We organized news into categories like sports, politics & more ensuring relevant content delivery and enhancing user engagement.</p>
+				<p>Tools Used: UI/UX-Figma, MySQL, HTML, CSS, JavaScript, AngularJS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href=" " class="block-20 zoom-effect" style="background-image: url('images/project4.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href=" ">IntelliKids - Kids Learning Application</a></h3>
+				  <p>Designed and Developed an innovative Educational Application for children, aimed at reducing the time and effort burden on teachers while promoting a comfortable and engaging learning environment for students. Implemented fast and efficient representation techniques to simplify learning and foster better comprehension of concepts. Focused on cultivating engagement to ensure seamless understanding and retention of material. </p>
+				  <p>Tools Used: Java, JavaScript, MySQL, Figma, Canvas, Flutter, COPPA</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">+</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number"> <a href="https://drive.google.com/file/d/1xtTnp4_wmDYWJJvbXSxuMidzMrLANozb/view?usp=sharing" target="_blank">2</a></strong>
+                <span>Research Papers Published</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number"><a href="https://drive.google.com/drive/folders/1ghrgAoPr6Sza8fPsGoEIqdaJR3p46eNI" target="_blank">8</a></strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<p><a href="https://github.com/Yogi0806" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<br> 	
+						<div class="heading"> 
+							<h3>Since</h3>
+							<h3><b>"Java powers the logic; the web delivers the magic."</b></h3>
+							<h3>I enjoy to solve problems &amp; uncover hidden data stories.</h3>
+						
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p><a href="https://maps.app.goo.gl/tKDhJo1g6K12VhPx8" target="_blank">Pune, Maharashtra, India</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://8862014702" target="_blank">+91 8862014702</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:pathakyogiraj86@gmail.com" target="_blank">pathakyogiraj86@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/11Zh51wfPepCwC2VJZCeE5cAM_sgKS7Ey/view?usp=sharing" target="_blank">Click Here</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question? </span> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on </li>
+					  <!-- <li class="ftco-animate"><a href=" "><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/yogiraj-pathak-91423322a/" target="_blank"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href=" "><span class="icon-twitter"></span></a></li>-->
+					  <li class="ftco-animate"><a href="https://github.com/Yogi0806" target="_blank"><span class="icon-github"></span></a></li> 
+
+					  <li class="ftco-animate"><a href="https://www.facebook.com/share/1849WqcoEe/" target="_blank">
+					  <span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/yogi_86_45/" target="_blank"><span class="icon-instagram"></span></a></li> 
+					   
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
